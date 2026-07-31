@@ -1,0 +1,513 @@
+/* =====================================================
+   AI and Science: Evolution or Extinction? — NeurIPS 2026
+   Vellum & rubric: clean modern typography with quiet
+   manuscript motifs (rubricated margins, drop caps,
+   fleurons, title-page rules).
+   ===================================================== */
+
+:root {
+  --vellum: #FAF6EC;
+  --vellum-deep: #F2EBD9;
+  --ink: #211C14;
+  --ink-soft: #6B6150;
+  --rubric: #A02C1A;
+  --gold: #B08D3E;
+  --line: #DCD2BC;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Instrument Sans", -apple-system, "Segoe UI", sans-serif;
+
+  --measure: 66ch;
+  --rail: 11rem;          /* rubricated margin rail width */
+  --nav-h: 3.5rem;
+}
+
+* { box-sizing: border-box; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  margin: 0;
+  background: var(--vellum);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--rubric); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--ink); }
+:focus-visible { outline: 2px solid var(--rubric); outline-offset: 3px; border-radius: 1px; }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.15; margin: 0; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---------------- Navigation ---------------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--vellum) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-nav {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  min-height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+.nav-brand .amp { color: var(--rubric); font-style: italic; font-weight: 400; }
+
+.nav-menu {
+  display: flex;
+  gap: 1.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-menu a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.86rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.35rem 0;
+  border-bottom: 2px solid transparent;
+}
+.nav-menu a:hover { color: var(--ink); }
+.nav-menu a.active { color: var(--rubric); border-bottom-color: var(--rubric); }
+
+.nav-toggle {
+  display: none;
+  font: inherit;
+  font-size: 0.86rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav-toggle-bar {
+  width: 1rem;
+  height: 2px;
+  background: var(--rubric);
+  box-shadow: 0 5px 0 var(--rubric), 0 -5px 0 var(--rubric);
+}
+
+/* ---------------- Hero: the title page ---------------- */
+
+.hero { padding: clamp(2rem, 6vw, 4.5rem) 1.25rem; }
+
+.hero-frame {
+  max-width: 46rem;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid var(--gold);
+  outline: 1px solid var(--line);
+  outline-offset: 6px;
+  padding: clamp(2.5rem, 7vw, 5rem) clamp(1.25rem, 5vw, 4rem);
+}
+
+.hero-eyebrow {
+  margin: 0 0 2.25rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--rubric);
+}
+
+.hero-title { display: grid; gap: 0.75rem; }
+
+.hero-title-main {
+  font-size: clamp(2.6rem, 8vw, 4.75rem);
+  font-weight: 560;
+  font-variation-settings: "opsz" 144;
+  letter-spacing: -0.015em;
+}
+
+.hero-title-sub {
+  font-size: clamp(1.35rem, 3.6vw, 2rem);
+  font-weight: 380;
+  color: var(--ink-soft);
+}
+.hero-title-sub em { font-style: italic; color: var(--gold); }
+.hero-title-sub .rubric { color: var(--rubric); }
+
+.hero-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 2.25rem auto 1.75rem;
+  max-width: 22rem;
+  color: var(--gold);
+}
+.hero-rule::before,
+.hero-rule::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  height: 3px;
+}
+.hero-rule span { font-size: 1rem; line-height: 1; }
+
+.hero-meta {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.hero-tagline {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
+
+/* ---------------- Sections & the rubricated margin ---------------- */
+
+.section {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4.5rem) 1.25rem;
+  display: grid;
+  grid-template-columns: var(--rail) minmax(0, 1fr);
+  gap: 0 2.5rem;
+  scroll-margin-top: calc(var(--nav-h) + 1rem);
+}
+
+/* Margin rail: red incipit like a manuscript rubric */
+.section-rubric {
+  text-align: right;
+  padding-top: 0.55rem; /* optically align with h2 cap height */
+}
+.section-rubric .rubric-no {
+  display: block;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--gold);
+}
+.section-rubric .rubric-word {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--rubric);
+  margin-top: 0.35rem;
+}
+
+.section-body {
+  max-width: var(--measure);
+  border-left: 1px solid var(--line);
+  padding-left: 2.5rem;
+}
+.section-body-wide { max-width: none; }
+
+.section-body h2 {
+  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+  margin-bottom: 1.5rem;
+}
+
+.section-body h2::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  border-top: 2px solid var(--rubric);
+  margin-top: 0.75rem;
+}
+
+.section-body p { margin: 0 0 1.1rem; }
+.section-body > :last-child { margin-bottom: 0; }
+
+/* Drop cap on section openings */
+.dropcap::first-letter {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 3.4em;
+  line-height: 0.82;
+  float: left;
+  padding: 0.06em 0.12em 0 0;
+  color: var(--rubric);
+}
+
+/* Fleuron divider between sections */
+.fleuron {
+  text-align: center;
+  color: var(--gold);
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+/* ---------------- About: guiding questions ---------------- */
+
+.questions {
+  background: var(--vellum-deep);
+  border: 1px solid var(--line);
+  padding: 1.75rem 2rem;
+  margin: 1.75rem 0;
+}
+
+.questions-heading {
+  font-size: 0.82rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--rubric);
+  margin-bottom: 1rem;
+}
+
+.questions ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: q;
+  display: grid;
+  gap: 1rem;
+}
+.questions li {
+  counter-increment: q;
+  position: relative;
+  padding-left: 2.4rem;
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+.questions li::before {
+  content: counter(q, lower-roman) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-style: italic;
+  color: var(--gold);
+}
+
+/* ---------------- Lists: topics & guidelines ---------------- */
+
+.topic-list, .guideline-list {
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+}
+.topic-list li, .guideline-list li {
+  padding-left: 1.4rem;
+  position: relative;
+}
+.topic-list li::before, .guideline-list li::before {
+  content: "❧";
+  position: absolute;
+  left: 0;
+  color: var(--rubric);
+  font-size: 0.85em;
+  top: 0.15em;
+}
+.guideline-list strong { font-weight: 600; }
+
+/* ---------------- Submit button ---------------- */
+
+.submit-row { margin-top: 1.75rem; }
+
+.button {
+  display: inline-block;
+  background: var(--rubric);
+  color: var(--vellum);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.6rem;
+  border: 1px solid var(--rubric);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.button:hover { background: transparent; color: var(--rubric); }
+.button[aria-disabled="true"] { opacity: 0.85; cursor: default; }
+
+/* ---------------- Important dates ---------------- */
+
+.dates-list { margin: 0 0 1rem; }
+
+.dates-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.dates-row:first-child { border-top: 1px solid var(--line); }
+
+.dates-row dt { font-weight: 600; margin: 0; }
+.dates-row dd {
+  margin: 0 0 0 auto;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--rubric);
+  white-space: nowrap;
+}
+
+.footnote { font-size: 0.88rem; color: var(--ink-soft); }
+
+/* ---------------- Schedule ---------------- */
+
+.schedule {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+
+.slot {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.slot:first-child { border-top: 1px solid var(--line); }
+
+.slot-time {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  padding-top: 0.15rem;
+}
+.slot-talk .slot-time { color: var(--rubric); }
+
+.slot-info h3 {
+  font-size: 1.1rem;
+  font-weight: 550;
+}
+.slot-info p { margin: 0.4rem 0 0; font-size: 0.95rem; color: var(--ink-soft); }
+
+.slot-break { background: linear-gradient(to right, transparent, var(--vellum-deep) 12%, var(--vellum-deep) 88%, transparent); }
+.slot-break .slot-info h3 { font-family: var(--font-body); font-size: 0.9rem; font-weight: 500; font-style: italic; color: var(--ink-soft); padding-top: 0.1rem; }
+
+.slot-speaker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-right: 1.25rem;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.slot-speaker:hover { color: var(--rubric); }
+.slot-speaker img { width: 28px; height: 34px; flex: none; }
+
+/* ---------------- People grids ---------------- */
+
+.people-grid {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
+  gap: 2.25rem 1.75rem;
+}
+
+.person { max-width: 14rem; }
+.person img { width: 100%; max-width: 11rem; margin-bottom: 0.9rem; }
+.person h3 { font-size: 1.15rem; font-weight: 550; }
+.person-affil { margin: 0.25rem 0 0; font-size: 0.92rem; color: var(--ink-soft); }
+.person-role {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--rubric);
+}
+
+/* highlight a speaker card when jumped to from the schedule */
+.person:target img { outline: 2px solid var(--rubric); outline-offset: 4px; }
+
+/* Neat rows on wide screens: 3×2 speakers, one row of five organizers */
+@media (min-width: 56rem) {
+  .people-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .people-grid-organizers { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+
+/* ---------------- Footer ---------------- */
+
+.site-footer {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3.5rem;
+  text-align: center;
+}
+.site-footer .hero-rule { margin-bottom: 2rem; }
+.site-footer p { margin: 0.4rem 0; }
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 56rem) {
+  .section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .section-rubric {
+    text-align: left;
+    padding: 0 0 0.75rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+  .section-rubric .rubric-no { font-size: 1.15rem; }
+  .section-body { border-left: 0; padding-left: 0; }
+}
+
+@media (max-width: 44rem) {
+  .nav-toggle { display: inline-flex; }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--vellum);
+    border-bottom: 1px solid var(--line);
+    padding: 0.5rem 1.25rem 1rem;
+  }
+  .nav-menu.open { display: flex; }
+  .nav-menu a { display: block; padding: 0.55rem 0; border-bottom: 0; }
+  .nav-menu a.active { border-bottom: 0; }
+
+  .slot { grid-template-columns: 3.4rem minmax(0, 1fr); gap: 0.9rem; }
+  .slot-speaker { display: flex; margin: 0.4rem 0 0; }
+
+  .hero-frame { outline-offset: 4px; }
+}

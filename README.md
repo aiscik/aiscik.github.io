@@ -27,14 +27,17 @@ then visit <http://localhost:8000>.
 - **Headshots**: drop real photos (ideally square-ish, ≥400px wide) into `assets/headshots/` and update the `src` attributes. The arched-frame placeholder SVGs can be deleted once replaced.
 - **Colors/fonts**: edit the CSS custom properties in the `:root` block at the top of `css/styles.css`.
 
-## Publishing to GitHub Pages
+## Deploying
 
-1. Create a repository on GitHub (e.g. `your-org/neurips2026-ai-science` or `your-org.github.io`).
-2. From this folder:
+The site is published from the `main` branch of `nsurijr/neurips2026-ai-science`
+via GitHub Pages, at <https://nsurijr.github.io/neurips2026-ai-science/>.
+
+Deploying a change is just a push:
 
 ```bash
-git init && git add -A && git commit -m "Workshop website" && git branch -M main && git remote add origin git@github.com:YOUR-ORG/YOUR-REPO.git && git push -u origin main
+git add -A && git commit -m "Describe the change" && git push
 ```
 
-3. On GitHub: **Settings → Pages → Source: Deploy from a branch → Branch: `main` / root → Save**.
-4. The site appears at `https://YOUR-ORG.github.io/YOUR-REPO/` within a minute or two.
+Pages rebuilds automatically, usually within a minute. A `.nojekyll` file at the
+repo root tells GitHub to serve the files as-is rather than running them through
+Jekyll.

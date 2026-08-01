@@ -135,12 +135,22 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ---------------- Hero: the title page ---------------- */
 
-.hero { padding: clamp(2rem, 6vw, 4.5rem) var(--page-pad); }
+/* Full-bleed banner; the vertical padding is what lets the photograph
+   show above and below the title frame. */
+.hero {
+  padding: clamp(2.75rem, 7vw, 6rem) var(--page-pad);
+  background-color: var(--ink);
+  background-image: url("../assets/atlanta-piedmont-park.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
 .hero-frame {
   max-width: var(--hero-w);
   margin: 0 auto;
   text-align: center;
+  /* opaque, so the frame keeps its own ground over the photograph */
+  background: var(--vellum);
   border: 1px solid var(--gold);
   outline: 1px solid var(--line);
   outline-offset: 6px;

@@ -17,15 +17,20 @@
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Instrument Sans", -apple-system, "Segoe UI", sans-serif;
 
-  /* One column governs the whole page. Every band below is derived from
-     these, so prose, tables and card grids all share a right edge. */
-  --measure: 34rem;       /* prose column — ~72 characters at the body size */
+  /* The page band and the rail sit at their original positions. The text
+     column's right edge mirrors its left inset about the page centre, so
+     every section closes on the same imaginary line — set symmetrically
+     against the title frame's edges. */
+  --page: 72rem;          /* outer band */
+  --page-pad: 1.25rem;    /* viewport gutter */
   --rail: 11rem;          /* rubricated margin rail */
   --col-gap: 2.5rem;      /* rail to body */
   --body-pad: 2.5rem;     /* body's own left inset, inside its border */
-  --page-pad: 1.25rem;    /* viewport gutter */
-  --band: calc(var(--rail) + var(--col-gap) + var(--body-pad) + var(--measure));
-  --page: calc(var(--band) + var(--page-pad) * 2);
+  --hero-w: 46rem;        /* the title frame */
+  /* distance from the band's left edge in to the body's vertical rule */
+  --body-inset: calc(var(--page-pad) + var(--rail) + var(--col-gap));
+  /* mirror it on the right: the column is centred on the page */
+  --body-w: calc(var(--page) - var(--body-inset) * 2);
   --nav-h: 3.5rem;
 }
 
@@ -87,7 +92,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .nav-menu {
   display: flex;
-  gap: 1.05rem;
+  gap: 1.4rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -97,8 +102,8 @@ img { max-width: 100%; height: auto; display: block; }
 .nav-menu a {
   color: var(--ink-soft);
   text-decoration: none;
-  font-size: 0.79rem;
-  letter-spacing: 0.04em;
+  font-size: 0.86rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 0.35rem 0;
   border-bottom: 2px solid transparent;
@@ -133,7 +138,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero { padding: clamp(2rem, 6vw, 4.5rem) var(--page-pad); }
 
 .hero-frame {
-  max-width: var(--band);
+  max-width: var(--hero-w);
   margin: 0 auto;
   text-align: center;
   border: 1px solid var(--gold);
@@ -235,7 +240,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .section-body {
-  max-width: calc(var(--measure) + var(--body-pad));
+  max-width: var(--body-w);
   border-left: 1px solid var(--line);
   padding-left: var(--body-pad);
 }
@@ -476,7 +481,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ---------------- Responsive ---------------- */
 
-@media (max-width: 52.5rem) {
+@media (max-width: 56rem) {
   .section {
     grid-template-columns: minmax(0, 1fr);
     gap: 0;

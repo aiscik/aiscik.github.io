@@ -1,0 +1,52 @@
+/* =====================================================
+   Cool variant — palette only. Loaded after styles.css by
+   cool.html; every manuscript motif is untouched, the
+   pigments just change.
+
+   Sampled from the reference posters:
+     ground  #F0F0F0    navy   #003050
+     teal    #00B090    orange #FF7010    mustard #F0C000
+
+   The two brightest samples (teal, mustard) sit at ~2:1 on
+   the grey ground, so anything carrying text uses a deeper
+   mix of the same hue; the source values are kept for the
+   few purely graphic marks.
+   ===================================================== */
+
+:root {
+  --vellum: #F0F0F0;       /* the cool ground */
+  --vellum-deep: #E3E8EB;  /* panels and banded rows */
+  --ink: #082C42;          /* navy, off the sampled #003050 */
+  --ink-soft: #4C616E;     /* muted navy-grey */
+  --rubric: #00705A;       /* teal, deepened to carry text */
+  --gold: #8AA3B1;         /* steel, for the fine rules and numerals */
+  --line: #CBD5DA;         /* hairlines */
+
+  /* used sparingly, as accents only */
+  --pop-orange: #FF7010;
+  --pop-mustard: #F0C000;
+  --teal-bright: #00B090;
+}
+
+/* --- the sparing warm accents ------------------------------------ */
+
+/* the question mark that carries the title's whole argument */
+.hero-title-sub .rubric { color: var(--pop-orange); }
+
+/* the ornament between the paired rules, top and bottom of the page */
+.hero-rule span { color: var(--pop-mustard); }
+
+/* --- keeping the motifs legible on a cooler, lighter ground ------- */
+
+/* the brighter sampled teal is fine here: it carries no text */
+.section-body h2::after { border-top-color: var(--teal-bright); }
+
+/* --gold stays pale for the hairlines and the title frame, but the
+   numerals set in it are text, so those take a deeper steel */
+.section-rubric .rubric-no,
+.questions li::before,
+.question-list li::before { color: #4F6B7B; }
+
+/* white on deep teal, rather than on vermilion */
+.button { background: var(--rubric); border-color: var(--rubric); }
+.button:hover { background: transparent; color: var(--rubric); }

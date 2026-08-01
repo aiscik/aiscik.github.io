@@ -350,46 +350,23 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ---------------- Submit button ---------------- */
 
-.submit-row { margin-top: 2rem; }
+.submit-row { margin-top: 1.75rem; }
 
-/* Set like a printed label: a hairline rule struck inside the block and a
-   gold keyline outside it, echoing the double rules of the title frame. */
 .button {
   display: inline-block;
-  padding: 1rem 2.3rem;
   background: var(--rubric);
   color: var(--vellum);
   text-decoration: none;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  border: 0;
-  box-shadow:
-    inset 0 0 0 4px var(--rubric),                                  /* covers the band … */
-    inset 0 0 0 5px color-mix(in srgb, var(--vellum) 60%, transparent), /* … leaving a rule */
-    0 0 0 3px var(--vellum),
-    0 0 0 4px var(--gold);
-  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  padding: 0.8rem 1.6rem;
+  border: 1px solid var(--rubric);
+  transition: background 0.15s ease, color 0.15s ease;
 }
-
-/* Inverts to the vellum ground, as though the block were lifted off the page */
-.button:hover,
-.button:focus-visible {
-  background: var(--vellum);
-  color: var(--rubric);
-  box-shadow:
-    inset 0 0 0 4px var(--vellum),
-    inset 0 0 0 5px color-mix(in srgb, var(--rubric) 45%, transparent),
-    0 0 0 3px var(--vellum),
-    0 0 0 4px var(--rubric);
-}
-
-.button[aria-disabled="true"] { cursor: default; }
-
-@media (prefers-reduced-motion: reduce) {
-  .button { transition: none; }
-}
+.button:hover { background: transparent; color: var(--rubric); }
+.button[aria-disabled="true"] { opacity: 0.85; cursor: default; }
 
 /* ---------------- Important dates ---------------- */
 

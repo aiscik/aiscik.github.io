@@ -300,7 +300,8 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 1rem;
 }
 
-.questions ol {
+.questions ol,
+.question-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -308,7 +309,12 @@ img { max-width: 100%; height: auto; display: block; }
   display: grid;
   gap: 1rem;
 }
-.questions li {
+
+/* Same numbering, but set in the run of prose rather than in the panel */
+.question-list { margin: 1.5rem 0 1.35rem; }
+
+.questions li,
+.question-list li {
   counter-increment: q;
   position: relative;
   padding-left: 2.4rem;
@@ -316,7 +322,8 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 1.08rem;
   line-height: 1.5;
 }
-.questions li::before {
+.questions li::before,
+.question-list li::before {
   content: counter(q, lower-roman) ".";
   position: absolute;
   left: 0;

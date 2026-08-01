@@ -1,18 +1,28 @@
 /* =====================================================
    AI and Science: Evolution or Extinction? — NeurIPS 2026
-   Vellum & rubric: clean modern typography with quiet
-   manuscript motifs (rubricated margins, drop caps,
-   fleurons, title-page rules).
+   Clean modern typography with quiet manuscript motifs
+   (rubricated margins, drop caps, fleurons, title-page
+   rules), set in a cool palette.
+
+   Ground, navy, teal, orange and mustard are sampled from
+   the reference posters. The two brightest samples sit at
+   about 2:1 on the grey, so anything carrying text uses a
+   deeper mix of the same hue; the source values are kept
+   for the purely graphic marks.
    ===================================================== */
 
 :root {
-  --vellum: #FAF6EC;
-  --vellum-deep: #F2EBD9;
-  --ink: #211C14;
-  --ink-soft: #6B6150;
-  --rubric: #A02C1A;
-  --gold: #B08D3E;
-  --line: #DCD2BC;
+  --vellum: #F0F0F0;      /* the cool ground */
+  --vellum-deep: #E3E8EB; /* panels and banded rows */
+  --ink: #082C42;         /* navy */
+  --ink-soft: #4C616E;    /* muted navy-grey */
+  --rubric: #00705A;      /* teal, deepened to carry text */
+  --gold: #8AA3B1;        /* steel, for the fine rules */
+  --line: #CBD5DA;        /* hairlines */
+
+  --steel-deep: #4F6B7B;  /* steel that carries text */
+  --teal-bright: #00B090; /* the sampled teal, graphic marks only */
+  --pop-orange: #FF7010;  /* used sparingly */
 
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Instrument Sans", -apple-system, "Segoe UI", sans-serif;
@@ -179,8 +189,10 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 380;
   color: var(--ink-soft);
 }
-.hero-title-sub em { font-style: italic; color: var(--gold); }
-.hero-title-sub .rubric { color: var(--rubric); }
+.hero-title-sub em { font-style: italic; color: var(--pop-orange); }
+/* the pale steel would sit at 2.3:1 here, so the question mark takes the
+   deeper one — the same steel the numerals use */
+.hero-title-sub .rubric { color: var(--steel-deep); }
 
 .hero-rule {
   display: flex;
@@ -198,7 +210,7 @@ img { max-width: 100%; height: auto; display: block; }
   border-bottom: 1px solid var(--line);
   height: 3px;
 }
-.hero-rule span { font-size: 1.85rem; line-height: 1; }
+.hero-rule span { font-size: 1.85rem; line-height: 1; color: var(--rubric); }
 
 .hero-meta {
   margin: 0 0 0.6rem;
@@ -238,7 +250,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-family: var(--font-display);
   font-style: italic;
   font-size: 1.5rem;
-  color: var(--gold);
+  color: var(--steel-deep);
 }
 .section-rubric .rubric-word {
   display: block;
@@ -264,7 +276,8 @@ img { max-width: 100%; height: auto; display: block; }
   content: "";
   display: block;
   width: 3.5rem;
-  border-top: 2px solid var(--rubric);
+  /* the brighter sampled teal is fine here: it carries no text */
+  border-top: 2px solid var(--teal-bright);
   margin-top: 0.75rem;
 }
 
@@ -339,7 +352,7 @@ img { max-width: 100%; height: auto; display: block; }
   left: 0;
   top: 0;
   font-style: italic;
-  color: var(--gold);
+  color: var(--steel-deep);
 }
 
 /* ---------------- Lists: topics & guidelines ---------------- */

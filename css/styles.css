@@ -188,7 +188,7 @@ img { max-width: 100%; height: auto; display: block; }
   border-bottom: 1px solid var(--line);
   height: 3px;
 }
-.hero-rule span { font-size: 1.6rem; line-height: 1; }
+.hero-rule span { font-size: 1.85rem; line-height: 1; }
 
 .hero-meta {
   margin: 0 0 0.6rem;

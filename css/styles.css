@@ -190,9 +190,24 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--ink-soft);
 }
 .hero-title-sub em { font-style: italic; color: var(--pop-orange); }
-/* the pale steel would sit at 2.3:1 here, so the question mark takes the
-   deeper one — the same steel the numerals use */
-.hero-title-sub .rubric { color: var(--steel-deep); }
+.hero-title-sub .rubric { color: var(--gold); }
+
+/* The two futures are set against each other: a written hand for the one
+   we came from, a machined face for the one in question. Both are sized
+   to sit on the same optical line as the roman text between them. */
+.hero-title-sub .evolution {
+  font-family: "Fleur De Leah", cursive;
+  font-size: 1.9em;
+  line-height: 0.6;
+  /* the script's flourishes reach into its side bearings, so the normal
+     word space reads as a collision */
+  margin-right: 0.1em;
+}
+.hero-title-sub .extinction {
+  font-family: "Asimovian", var(--font-display), sans-serif;
+  font-size: 0.82em;
+  letter-spacing: 0.01em;
+}
 
 .hero-rule {
   display: flex;
@@ -444,7 +459,8 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 600;
   font-size: 0.95rem;
   color: var(--ink-soft);
-  padding-top: 0.15rem;
+  /* centred in the row rather than sat on the first line's baseline */
+  align-self: center;
 }
 .slot-talk .slot-time { color: var(--rubric); }
 

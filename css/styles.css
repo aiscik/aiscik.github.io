@@ -460,6 +460,14 @@ img { max-width: 100%; height: auto; display: block; }
 .person { max-width: 14rem; }
 .person img { width: 100%; max-width: 11rem; margin-bottom: 0.9rem; }
 .person h3 { font-size: 1.15rem; font-weight: 550; }
+/* The role held, set apart from the institution beneath it */
+.person-title {
+  margin: 0.3rem 0 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
 .person-affil { margin: 0.25rem 0 0; font-size: 0.92rem; color: var(--ink-soft); }
 .person-role {
   margin: 0.5rem 0 0;

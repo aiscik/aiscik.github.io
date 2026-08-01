@@ -198,7 +198,8 @@ img { max-width: 100%; height: auto; display: block; }
    to sit on the same optical line as the roman text between them. */
 .hero-title-sub .evolution {
   font-family: "Fleur De Leah", cursive;
-  color: var(--pop-orange);
+  /* the palette's green against Extinction's orange */
+  color: var(--rubric);
   /* the script's x-height is 34.5 per em against the machined face's 53.5,
      so this is the size at which the two words read as the same size */
   font-size: 1.28em;

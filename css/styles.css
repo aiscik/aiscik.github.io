@@ -197,7 +197,9 @@ img { max-width: 100%; height: auto; display: block; }
    to sit on the same optical line as the roman text between them. */
 .hero-title-sub .evolution {
   font-family: "Fleur De Leah", cursive;
-  font-size: 1.9em;
+  /* the script's x-height is 34.5 per em against the machined face's 53.5,
+     so this is the size at which the two words read as the same size */
+  font-size: 1.28em;
   line-height: 0.6;
   /* the script's flourishes reach into its side bearings, so the normal
      word space reads as a collision */
@@ -464,6 +466,9 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .slot-talk .slot-time { color: var(--rubric); }
 
+/* the entry sits centred against its time, rather than filling the row */
+.slot-info { align-self: center; }
+
 .slot-info h3 {
   font-size: 1.1rem;
   font-weight: 550;
@@ -471,7 +476,7 @@ img { max-width: 100%; height: auto; display: block; }
 .slot-info p { margin: 0.4rem 0 0; font-size: 0.95rem; color: var(--ink-soft); }
 
 .slot-break { background: linear-gradient(to right, transparent, var(--vellum-deep) 12%, var(--vellum-deep) 88%, transparent); }
-.slot-break .slot-info h3 { font-family: var(--font-body); font-size: 0.9rem; font-weight: 500; font-style: italic; color: var(--ink-soft); padding-top: 0.1rem; }
+.slot-break .slot-info h3 { font-family: var(--font-body); font-size: 0.9rem; font-weight: 500; font-style: italic; color: var(--ink-soft); }
 
 .slot-speaker {
   display: inline-flex;

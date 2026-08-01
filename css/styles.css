@@ -391,12 +391,12 @@ img { max-width: 100%; height: auto; display: block; }
   position: relative;
 }
 .topic-list li::before, .guideline-list li::before {
-  content: "❧";
+  content: "❉";
   position: absolute;
   left: 0;
   color: var(--rubric);
-  font-size: 0.85em;
-  top: 0.15em;
+  font-size: 0.8em;
+  top: 0.1em;
 }
 .guideline-list strong { font-weight: 600; }
 
@@ -494,7 +494,8 @@ img { max-width: 100%; height: auto; display: block; }
 .slot-info p { margin: 0.4rem 0 0; font-size: 0.95rem; color: var(--ink-soft); }
 
 .slot-break { background: linear-gradient(to right, transparent, var(--vellum-deep) 12%, var(--vellum-deep) 88%, transparent); }
-.slot-break .slot-info h4 { font-family: var(--font-body); font-size: 0.9rem; font-weight: 500; font-style: italic; color: var(--ink-soft); }
+/* breaks read as the other entries do, set apart by the italic alone */
+.slot-break .slot-info h4 { font-style: italic; color: var(--ink-soft); }
 
 .slot-speaker {
   display: inline-flex;

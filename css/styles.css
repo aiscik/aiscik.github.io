@@ -391,12 +391,12 @@ img { max-width: 100%; height: auto; display: block; }
   position: relative;
 }
 .topic-list li::before, .guideline-list li::before {
-  content: "❉";
+  content: "❧";
   position: absolute;
   left: 0;
   color: var(--rubric);
-  font-size: 0.8em;
-  top: 0.1em;
+  font-size: 0.85em;
+  top: 0.15em;
 }
 .guideline-list strong { font-weight: 600; }
 
@@ -434,10 +434,9 @@ img { max-width: 100%; height: auto; display: block; }
 .dates-row:first-child { border-top: 1px solid var(--line); }
 
 .dates-row dt { font-weight: 600; margin: 0; }
+/* set as the term it answers, distinguished by colour alone */
 .dates-row dd {
   margin: 0 0 0 auto;
-  font-family: var(--font-display);
-  font-style: italic;
   color: var(--rubric);
   white-space: nowrap;
 }

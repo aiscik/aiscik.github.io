@@ -3,3 +3,7 @@
 
 # Local editor / tooling config (machine-specific paths)
 .claude/
+
+# Working notes. The repo serves its whole tree, so anything committed here
+# is readable at aiscik.github.io/<path>.
+handoff.md

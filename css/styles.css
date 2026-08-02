@@ -262,44 +262,43 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* Margin rail: red incipit like a manuscript rubric */
+/* The rail carries the section title itself, hung in the margin under its
+   numeral, so the body opens straight into its text. */
 .section-rubric {
   text-align: right;
-  padding-top: 0.55rem; /* optically align with h2 cap height */
+  padding-top: 0.1rem;
 }
 .section-rubric .rubric-no {
   display: block;
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1;
   color: var(--steel-deep);
 }
 .section-rubric .rubric-word {
   display: block;
-  font-size: 0.78rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.12;
   color: var(--rubric);
-  margin-top: 0.35rem;
+  margin-top: 0.5rem;
+  /* the rail is narrow, so long titles set over two or three lines */
+  text-wrap: balance;
+}
+/* a short rule closing the title back toward the body */
+.section-rubric .rubric-word::after {
+  content: "";
+  display: block;
+  width: 2.25rem;
+  border-top: 2px solid var(--teal-bright);
+  margin: 0.7rem 0 0 auto;
 }
 
 .section-body {
   max-width: var(--body-w);
   border-left: 1px solid var(--line);
   padding-left: var(--body-pad);
-}
-
-.section-body h2 {
-  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
-  margin-bottom: 1.5rem;
-}
-
-.section-body h2::after {
-  content: "";
-  display: block;
-  width: 3.5rem;
-  /* the brighter sampled teal is fine here: it carries no text */
-  border-top: 2px solid var(--teal-bright);
-  margin-top: 0.75rem;
 }
 
 .section-body p { margin: 0 0 1.1rem; }
@@ -585,6 +584,8 @@ img { max-width: 100%; height: auto; display: block; }
     gap: 0.6rem;
   }
   .section-rubric .rubric-no { font-size: 1.15rem; }
+  /* the rail runs horizontally here, so the rule closes to the left */
+  .section-rubric .rubric-word::after { margin-left: 0; }
   .section-body { border-left: 0; padding-left: 0; }
 }
 

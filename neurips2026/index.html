@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting to AI &amp; Scientific Knowledge</title>
+<!-- Pages serves static files only, so the redirect is done in the page:
+     the canonical tag points search engines at the real address, the
+     refresh covers browsers with JavaScript off, and replace() keeps the
+     hop out of history so Back returns where the reader came from. -->
+<link rel="canonical" href="https://aiscik.github.io/">
+<meta http-equiv="refresh" content="0; url=/">
+<script>location.replace("/" + location.hash);</script>
+<style>
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center;
+         background: #F0F0F0; color: #082C42;
+         font-family: -apple-system, "Segoe UI", sans-serif; }
+  a { color: #00705A; }
+</style>
+</head>
+<body>
+<p>Redirecting to <a href="/">aiscik.github.io</a>…</p>
+</body>
+</html>

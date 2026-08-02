@@ -29,8 +29,11 @@ then visit <http://localhost:8000>.
 
 ## Deploying
 
-The site is published from the `main` branch of `nsurijr/neurips2026-ai-science`
-via GitHub Pages, at <https://nsurijr.github.io/neurips2026-ai-science/>.
+The site is published from the `main` branch of `aiscik/aiscik.github.io`
+via GitHub Pages, at <https://aiscik.github.io/>.
+
+The repository name has to stay `aiscik.github.io` — that is what makes
+Pages serve it at the root of the address rather than in a subpath.
 
 Deploying a change is just a push:
 

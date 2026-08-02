@@ -282,9 +282,9 @@ img { max-width: 100%; height: auto; display: block; }
 .section-rubric .rubric-word {
   display: block;
   font-family: var(--font-body);
-  font-size: 0.78rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.5;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--rubric);

@@ -142,11 +142,11 @@
           </li>
           <li class="slot slot-talk">
             <span class="slot-time">08:30–09:00</span>
-            <div class="slot-info"><h4>Invited Talk 1</h4></div>
+            <div class="slot-info"><h4><a class="slot-link" href="#speaker-1">Invited Talk 1</a></h4></div>
           </li>
           <li class="slot slot-talk">
             <span class="slot-time">09:00–10:15</span>
-            <div class="slot-info"><h4>Panel Discussion 1: The language of AI safety for science</h4></div>
+            <div class="slot-info"><h4><a class="slot-link" href="#panel-1">Panel Discussion 1: The language of AI safety for science</a></h4></div>
           </li>
           <li class="slot slot-break">
             <span class="slot-time">10:15–10:45</span>
@@ -159,7 +159,7 @@
         <ol class="schedule">
           <li class="slot slot-talk">
             <span class="slot-time">10:45–12:00</span>
-            <div class="slot-info"><h4>Debate: Is human science dead?</h4></div>
+            <div class="slot-info"><h4><a class="slot-link" href="#debate">Debate: Is human science dead?</a></h4></div>
           </li>
           <li class="slot slot-break">
             <span class="slot-time">12:00–13:00</span>
@@ -167,11 +167,11 @@
           </li>
           <li class="slot slot-talk">
             <span class="slot-time">13:00–13:30</span>
-            <div class="slot-info"><h4>Invited Talk 2</h4></div>
+            <div class="slot-info"><h4><a class="slot-link" href="#speaker-2">Invited Talk 2</a></h4></div>
           </li>
           <li class="slot slot-talk">
             <span class="slot-time">13:30–14:45</span>
-            <div class="slot-info"><h4>Panel Discussion 2: Scientists in the loop + research scaffolding</h4></div>
+            <div class="slot-info"><h4><a class="slot-link" href="#panel-2">Panel Discussion 2: Scientists in the loop + research scaffolding</a></h4></div>
           </li>
         </ol>
       </section>
@@ -201,44 +201,80 @@
   <section class="section" id="speakers">
     <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">vi</span><span class="rubric-word">Invited speakers &amp; panelists</span></h2>
     <div class="section-body section-body-wide">
-      <ul class="people-grid">
+<ul class="people-grid">
         <li class="person" id="speaker-1">
           <img src="assets/headshots/speaker-1.svg" alt="Placeholder headshot of Speaker One" width="200" height="240">
-          <h3>Speaker One</h3>
+          <h4>Speaker One</h4>
           <p class="person-affil">University of Somewhere</p>
-          <p class="person-role">Invited talk · Lorem ipsum dolor sit amet</p>
+          <p class="person-role">Invited Talk 1</p>
         </li>
         <li class="person" id="speaker-2">
           <img src="assets/headshots/speaker-2.svg" alt="Placeholder headshot of Speaker Two" width="200" height="240">
-          <h3>Speaker Two</h3>
+          <h4>Speaker Two</h4>
           <p class="person-affil">Institute of Elsewhere</p>
-          <p class="person-role">Invited talk · Consectetur adipiscing elit</p>
-        </li>
-        <li class="person" id="speaker-3">
-          <img src="assets/headshots/speaker-3.svg" alt="Placeholder headshot of Speaker Three" width="200" height="240">
-          <h3>Speaker Three</h3>
-          <p class="person-affil">Somewhere State University</p>
-          <p class="person-role">Invited talk · Sed do eiusmod tempor</p>
-        </li>
-        <li class="person" id="speaker-4">
-          <img src="assets/headshots/speaker-4.svg" alt="Placeholder headshot of Speaker Four" width="200" height="240">
-          <h3>Speaker Four</h3>
-          <p class="person-affil">Anywhere Research Lab</p>
-          <p class="person-role">Panelist</p>
-        </li>
-        <li class="person" id="speaker-5">
-          <img src="assets/headshots/speaker-5.svg" alt="Placeholder headshot of Speaker Five" width="200" height="240">
-          <h3>Speaker Five</h3>
-          <p class="person-affil">College of Anyplace</p>
-          <p class="person-role">Panelist</p>
-        </li>
-        <li class="person" id="speaker-6">
-          <img src="assets/headshots/speaker-6.svg" alt="Placeholder headshot of Speaker Six" width="200" height="240">
-          <h3>Speaker Six</h3>
-          <p class="person-affil">University of Anywhere</p>
-          <p class="person-role">Invited talk &amp; panelist</p>
+          <p class="person-role">Invited Talk 2</p>
         </li>
       </ul>
+      <section class="speaker-group" id="panel-1">
+        <h3 class="group-title">Panel Discussion 1: The language of AI safety for science</h3>
+        <ul class="people-grid">
+        <li class="person">
+          <img src="assets/headshots/speaker-3.svg" alt="Placeholder headshot of Speaker Three" width="200" height="240">
+          <h4>Speaker Three</h4>
+          <p class="person-affil">Somewhere State University</p>
+        </li>
+        <li class="person">
+          <img src="assets/headshots/speaker-4.svg" alt="Placeholder headshot of Speaker Four" width="200" height="240">
+          <h4>Speaker Four</h4>
+          <p class="person-affil">Anywhere Research Lab</p>
+        </li>
+        <li class="person">
+          <img src="assets/headshots/speaker-5.svg" alt="Placeholder headshot of Speaker Five" width="200" height="240">
+          <h4>Speaker Five</h4>
+          <p class="person-affil">College of Anyplace</p>
+        </li>
+        </ul>
+      </section>
+      <section class="speaker-group" id="debate">
+        <h3 class="group-title">Debate: Is human science dead?</h3>
+        <ul class="people-grid">
+        <li class="person">
+          <img src="assets/headshots/speaker-6.svg" alt="Placeholder headshot of Speaker Six" width="200" height="240">
+          <h4>Speaker Six</h4>
+          <p class="person-affil">University of Anywhere</p>
+        </li>
+        <li class="person">
+          <img src="assets/headshots/speaker-7.svg" alt="Placeholder headshot of Speaker Seven" width="200" height="240">
+          <h4>Speaker Seven</h4>
+          <p class="person-affil">Institute of Somewhere</p>
+        </li>
+        <li class="person">
+          <img src="assets/headshots/speaker-8.svg" alt="Placeholder headshot of Speaker Eight" width="200" height="240">
+          <h4>Speaker Eight</h4>
+          <p class="person-affil">Elsewhere University</p>
+        </li>
+        </ul>
+      </section>
+      <section class="speaker-group" id="panel-2">
+        <h3 class="group-title">Panel Discussion 2: Scientists in the loop + research scaffolding</h3>
+        <ul class="people-grid">
+        <li class="person">
+          <img src="assets/headshots/speaker-9.svg" alt="Placeholder headshot of Speaker Nine" width="200" height="240">
+          <h4>Speaker Nine</h4>
+          <p class="person-affil">Anyplace Research Institute</p>
+        </li>
+        <li class="person">
+          <img src="assets/headshots/speaker-10.svg" alt="Placeholder headshot of Speaker Ten" width="200" height="240">
+          <h4>Speaker Ten</h4>
+          <p class="person-affil">Somewhere College</p>
+        </li>
+        <li class="person">
+          <img src="assets/headshots/speaker-11.svg" alt="Placeholder headshot of Speaker Eleven" width="200" height="240">
+          <h4>Speaker Eleven</h4>
+          <p class="person-affil">University of Elsewhere</p>
+        </li>
+        </ul>
+      </section>
     </div>
   </section>
 

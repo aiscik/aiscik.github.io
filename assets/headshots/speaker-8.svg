@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Placeholder headshot">
+  <!-- arched niche frame -->
+  <path d="M14 226 L14 100 A86 86 0 0 1 186 100 L186 226 Z" fill="#D6DFE5"/>
+  <path d="M14 226 L14 100 A86 86 0 0 1 186 100 L186 226 Z" fill="none" stroke="#8FA9B8" stroke-width="1.5"/>
+  <path d="M22 226 L22 102 A78 78 0 0 1 178 102 L178 226 Z" fill="none" stroke="#8FA9B8" stroke-width="0.75" opacity="0.55"/>
+  <!-- bust silhouette -->
+  <circle cx="100" cy="118" r="34" fill="#AEC0CA"/>
+  <path d="M42 226 C42 184 68 166 100 166 C132 166 158 184 158 226 Z" fill="#AEC0CA"/>
+</svg>

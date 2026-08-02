@@ -518,6 +518,23 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 2.25rem 1.5rem;
 }
 
+/* Speakers are grouped by the session they appear in */
+.speaker-group { margin-top: 2.5rem; scroll-margin-top: calc(var(--nav-h) + 1.5rem); }
+.group-title {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--rubric);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  margin-bottom: 1.25rem;
+}
+
+/* the schedule entry carries you down to the people in it */
+.slot-link { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
+.slot-link:hover { color: var(--rubric); border-bottom-color: currentColor; }
+
 .person { max-width: 14rem; }
 /* aspect-ratio + cover so a real photo of any shape fills the slot to the
    same proportions as the placeholders, keeping the grid even */

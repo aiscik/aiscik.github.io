@@ -276,26 +276,20 @@ img { max-width: 100%; height: auto; display: block; }
   line-height: 1;
   color: var(--steel-deep);
 }
+/* the label treatment the rail carried before it became the heading; the
+   h2 it now sits in would otherwise hand it the display serif and its
+   heading weight */
 .section-rubric .rubric-word {
   display: block;
-  /* the face the rail carried before it became the heading; the h2 it now
-     sits in would otherwise hand it the display serif */
   font-family: var(--font-body);
-  font-size: 1.45rem;
-  font-weight: 700;
-  line-height: 1.12;
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
   color: var(--rubric);
-  margin-top: 0.5rem;
-  /* the rail is narrow, so long titles set over two or three lines */
+  margin-top: 0.35rem;
   text-wrap: balance;
-}
-/* a short rule closing the title back toward the body */
-.section-rubric .rubric-word::after {
-  content: "";
-  display: block;
-  width: 2.25rem;
-  border-top: 2px solid var(--teal-bright);
-  margin: 0.7rem 0 0 auto;
 }
 
 .section-body {
@@ -587,8 +581,6 @@ img { max-width: 100%; height: auto; display: block; }
     gap: 0.6rem;
   }
   .section-rubric .rubric-no { font-size: 1.15rem; }
-  /* the rail runs horizontally here, so the rule closes to the left */
-  .section-rubric .rubric-word::after { margin-left: 0; }
   .section-body { border-left: 0; padding-left: 0; }
 }
 

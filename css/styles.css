@@ -487,8 +487,10 @@ img { max-width: 100%; height: auto; display: block; }
 .slot-info { align-self: center; }
 
 .slot-info h4 {
-  font-size: 1.1rem;
-  font-weight: 550;
+  /* set as the times are, so the whole programme reads in one voice */
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  font-weight: 600;
 }
 .slot-info p { margin: 0.4rem 0 0; font-size: 0.95rem; color: var(--ink-soft); }
 

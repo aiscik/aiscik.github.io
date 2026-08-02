@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Placeholder headshot">
   <!-- the niche fills the frame, matching the arch the CSS gives photographs -->
-  <path d="M0 240 L0 100.8 A100 100.8 0 0 1 200 100.8 L200 240 Z" fill=""/>
+  <path d="M0 240 L0 100.8 A100 100.8 0 0 1 200 100.8 L200 240 Z" fill="#DDE5EA"/>
   <circle cx="100" cy="108" r="34" fill="#AEC0CA"/>
   <path d="M36 240 C36 196 64 174 100 174 C136 174 164 196 164 240 Z" fill="#AEC0CA"/>
 </svg>

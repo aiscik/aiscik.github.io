@@ -278,6 +278,9 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .section-rubric .rubric-word {
   display: block;
+  /* the face the rail carried before it became the heading; the h2 it now
+     sits in would otherwise hand it the display serif */
+  font-family: var(--font-body);
   font-size: 1.45rem;
   font-weight: 700;
   line-height: 1.12;

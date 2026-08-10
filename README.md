@@ -4,20 +4,19 @@ Static website for the NeurIPS 2026 workshop. Plain HTML/CSS/JS — no build ste
 
 ## Structure
 
-Four pages, navigated by the top menu (About uses the full title banner; the
+Three pages, navigated by the top menu (About uses the full title banner; the
 others use a slimmer one):
 
 ```
-index.html                   # About: the workshop, dates, speakers, organizers
-scope/index.html             # Scope: what is in and out of scope
-program/index.html           # Program: the day's schedule
-call-for-papers/index.html   # Call for Papers: tracks, call, submission
+index.html                   # About: the workshop, scope, dates, speakers, organizers
+schedule/index.html          # Schedule: the day's schedule
+call-for-papers/index.html   # Call for Papers: call (with scope), tracks, guidelines
 css/styles.css               # all styling (design tokens at the top in :root)
 js/main.js                   # mobile nav toggle (site works without JS)
 assets/headshots/            # placeholder headshot SVGs — replace with real photos
 ```
 
-The Program schedule links across to the speaker cards on the About page
+The Schedule page links across to the speaker cards on the About page
 (e.g. `/#speaker-1`). Links to CSS/JS carry a `?v=N` query to defeat GitHub
 Pages' caching — bump `N` on every page when you change `styles.css` or
 `main.js`.

@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Fleur+De+Leah&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/styles.css?v=3">
+<link rel="stylesheet" href="/css/styles.css?v=8">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='50' font-size='78' text-anchor='middle' dominant-baseline='central'>❉</text></svg>">
 </head>
 <body>
@@ -22,10 +22,9 @@
     </button>
     <ul class="nav-menu" id="nav-menu">
       <li><a href="/" aria-current="page">About</a></li>
-      <li><a href="/scope/">Scope</a></li>
-      <li><a href="/program/">Program</a></li>
+      <li><a href="/schedule/">Schedule</a></li>
       <li><a href="/call-for-papers/">Call for Papers</a></li>
-      <li><a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/AISciK" target="_blank" rel="noopener">Submit</a></li>
+      <li><a class="nav-cta" href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/AISciK" target="_blank" rel="noopener">Submit</a></li>
     </ul>
   </nav>
 </header>
@@ -63,9 +62,111 @@
 
   <div class="fleuron" aria-hidden="true">ஐ</div>
 
+  <!-- ======================= SCOPE ======================= -->
+  <section class="section" id="scope">
+    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">ii</span><span class="rubric-word">Scope</span></h2>
+    <div class="section-body">
+      <p class="dropcap">At AISciK, we will ask: as the integration of agentic AI into scientific practice accelerates, how can we preserve the standards and norms that uphold a scientific culture and the knowledge it produces? What does science lose when AI systems participate in scientific discovery, and how does that trade-off against the potential for progress? To what extent does our ability to evaluate, interpret, and trust them depend on discipline, and what does this mean about the nature of knowledge more generally?</p>
+      <p>No single community currently holds the expertise to fully address these considerations. Philosophy of science, science and technology studies, sociology of science, statistics, psychology, anthropology, and the science of science have each built substantive accounts of scientific integrity, trustworthiness, and standards of practice over more than a century. Many of these traditions are already asking what changes when AI systems become collaborators rather than instruments. Technical work from the AI safety community aims to evaluate various capabilities and risks of agentic systems, model their computational processes, and robustly, faithfully interpret model internals. From a scientific perspective, the barrier for entry to using AI is getting lower, and many fields are building bespoke tools (or forming startups) to tackle problems big and small.</p>
+      <p>These groups are rarely in dialogue with one another on these questions, particularly regarding the epistemic risks specific to scientific knowledge production and the various ways to carve it up.</p>
+      <p>We invite submissions from researchers across the empirical, formal, historical, and interpretive disciplines that study science, alongside researchers working on AI safety, interpretability, evaluation, and agentic systems. Submissions are reviewed against the standards of the tradition they are working in; a submission need not contain experiments, models, or code to be competitive.</p>
+    </div>
+  </section>
+
+  <div class="fleuron" aria-hidden="true">ஐ</div>
+
+  <!-- ======================= TOPICS ======================= -->
+  <section class="section" id="topics">
+    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">iii</span><span class="rubric-word">Topics of Interest</span></h2>
+    <div class="section-body">
+      <p class="dropcap">The topics below form an illustrative list of topics of interest organized by subject, not by track. Any of them can be taken up as a contribution to the Research, Datasets and Evaluations, or Perspectives tracks.</p>
+      <ol class="topics-list">
+        <li>
+          <h3>Epistemic values and what scientific integrity requires</h3>
+          <p class="topic-desc">What makes scientific knowledge trustworthy, and which of those properties are at stake when AI systems participate in producing it.</p>
+          <ul class="topic-list">
+            <li>Accounts of scientific integrity from philosophy of science, STS, sociology, statistics, and the science of science, brought to bear on AI-integrated practice</li>
+            <li>Whether the values that constitute good science are shared across disciplines or specific to them, and what follows for building general-purpose systems</li>
+            <li>Reproducibility, robustness, and error control as epistemic rather than procedural properties</li>
+            <li>What understanding, as distinct from prediction, requires of a scientific practice</li>
+            <li>Values that have no current technical operationalization, and what it would take to give them one</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Automation, judgment, and the division of scientific labor</h3>
+          <p class="topic-desc">Which parts of scientific work can be delegated, which cannot, and how to tell the difference.</p>
+          <ul class="topic-list">
+            <li>What scientific judgment consists in, and where it resists substitution</li>
+            <li>Effects of automation on training pipelines, apprenticeship, and early-career trajectories</li>
+            <li>Tacit knowledge, craft skill, and forms of expertise that do not survive formalization</li>
+            <li>Gradual disempowerment and the long-run consequences of incremental delegation</li>
+            <li>Historical cases of instrumentation and automation reshaping a discipline, and what they predict here</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Validity and the measurement of epistemic properties</h3>
+          <p class="topic-desc">Evaluations are a primary instrument for assessing AI in science. This cluster treats them as objects of study.</p>
+          <ul class="topic-list">
+            <li>Construct validity in scientific AI evaluation: what benchmarks and task-completion metrics actually measure</li>
+            <li>Meta-evaluations and reproducible critiques of existing scientific benchmarks and agent evaluations</li>
+            <li>Evaluation designs that target epistemic properties rather than task success</li>
+            <li>Measuring properties that admit no ground truth, and what substitutes for it</li>
+            <li>Expert disagreement in evaluating scientific work: when it signals invalid measurement and when it signals genuine pluralism</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Safety and alignment failures with epistemic consequences</h3>
+          <p class="topic-desc">Failure modes documented in general AI safety research, examined for what they do to knowledge production specifically.</p>
+          <ul class="topic-list">
+            <li>Reward hacking and specification gaming in scientific tasks, including optimization against proxies for scientific quality</li>
+            <li>Sycophancy and the degradation of criticism, disagreement, and negative results</li>
+            <li>Deceptive and situationally aware behavior where the objective is a scientific claim</li>
+            <li>Homogenization of research questions, methods, and hypotheses across a field</li>
+            <li>What scientific alignment would consist of, and whether science offers a tractable testbed for alignment more broadly</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Explanation, interpretability, and understanding</h3>
+          <p class="topic-desc">Interpretability is offered as a route to trustworthy scientific AI. What that would require is unsettled.</p>
+          <ul class="topic-list">
+            <li>What counts as an explanation, and what an explanation licenses a scientist to believe</li>
+            <li>Explanatory virtues and standards of adequacy imported from philosophy of science into interpretability practice</li>
+            <li>Whether interpretability methods deliver understanding or the appearance of it</li>
+            <li>Uncertainty quantification and calibration as conditions on scientific use</li>
+            <li>When a system’s outputs can enter a scientific argument as evidence rather than as a lead to follow up</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Scientific practice under AI</h3>
+          <p class="topic-desc">Empirical study of what scientists are actually doing, as distinct from what systems are capable of.</p>
+          <ul class="topic-list">
+            <li>Observational, ethnographic, and longitudinal studies of AI use in research settings</li>
+            <li>When scientists defer to AI systems, when they override them, and what governs the choice</li>
+            <li>Trust calibration, automation bias, and deskilling in scientific workflows</li>
+            <li>How AI integration is changing collaboration, group composition, and credit within research teams</li>
+            <li>Disciplinary variation in adoption, resistance, and the reasons given for each</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Institutions, infrastructure, and sociotechnical guardrails</h3>
+          <p class="topic-desc">What would have to exist beyond better systems for AI-integrated science to remain trustworthy.</p>
+          <ul class="topic-list">
+            <li>Disclosure norms, red lines, and institutional policy on AI use in research</li>
+            <li>Research infrastructure and capacity-building required to integrate these systems responsibly</li>
+            <li>Funding structures, incentives, and the political economy of AI adoption in science</li>
+            <li>Governance mechanisms and how existing responses have fared in practice</li>
+            <li>Access, concentration, and who is positioned to do AI-integrated science at all</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="fleuron" aria-hidden="true">ஐ</div>
+
   <!-- ======================= IMPORTANT DATES ======================= -->
   <section class="section" id="dates">
-    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">ii</span><span class="rubric-word">Important dates</span></h2>
+    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">iv</span><span class="rubric-word">Important dates</span></h2>
     <div class="section-body">
       <dl class="dates-list">
         <div class="dates-row"><dt>Submission deadline</dt><dd>August 29, 2026</dd></div>
@@ -81,7 +182,7 @@
 
   <!-- ======================= SPEAKERS ======================= -->
   <section class="section" id="speakers">
-    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">iii</span><span class="rubric-word">Invited speakers &amp; panelists</span></h2>
+    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">v</span><span class="rubric-word">Invited speakers &amp; panelists</span></h2>
     <div class="section-body section-body-wide">
 <ul class="people-grid">
         <li class="person" id="speaker-1">
@@ -161,7 +262,7 @@
 
   <!-- ======================= ORGANIZERS ======================= -->
   <section class="section" id="organizers">
-    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">iv</span><span class="rubric-word">Organizers</span></h2>
+    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">vi</span><span class="rubric-word">Organizers</span></h2>
     <div class="section-body section-body-wide">
       <ul class="people-grid people-grid-organizers">
         <li class="person">
@@ -207,6 +308,6 @@
   <p class="footnote">Banner: <a href="https://commons.wikimedia.org/wiki/File:Atlanta_Skyline_-_Piedmont_Park.png">Atlanta skyline from Piedmont Park</a> by <a href="https://www.flickr.com/photos/seanpinto/26354316925/">seanpinto</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC&nbsp;BY&nbsp;2.0</a></p>
 </footer>
 
-<script src="/js/main.js?v=3"></script>
+<script src="/js/main.js?v=8"></script>
 </body>
 </html>

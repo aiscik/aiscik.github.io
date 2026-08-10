@@ -8,28 +8,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Fleur+De+Leah&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="/css/styles.css?v=3">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='50' font-size='78' text-anchor='middle' dominant-baseline='central'>❉</text></svg>">
 </head>
 <body>
 
 <header class="site-header" id="top">
   <nav class="site-nav" aria-label="Main">
-    <a class="nav-brand" href="#top">AI&nbsp;<span class="amp">&amp;</span>&nbsp;Scientific Knowledge</a>
+    <a class="nav-brand" href="/">AI&nbsp;<span class="amp">&amp;</span>&nbsp;Scientific Knowledge</a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
       <span class="nav-toggle-bar" aria-hidden="true"></span>
       Menu
     </button>
     <ul class="nav-menu" id="nav-menu">
-      <li><a href="#about">About</a></li>
-      <li><a href="#scope">Scope</a></li>
-      <li><a href="#tracks">Tracks</a></li>
-      <li><a href="#cfp">Call for Papers</a></li>
-      <li><a href="#submission">Submission</a></li>
-      <li><a href="#dates">Dates</a></li>
-      <li><a href="#schedule">Schedule</a></li>
-      <li><a href="#speakers">Speakers</a></li>
-      <li><a href="#organizers">Organizers</a></li>
+      <li><a href="/" aria-current="page">About</a></li>
+      <li><a href="/scope/">Scope</a></li>
+      <li><a href="/program/">Program</a></li>
+      <li><a href="/call-for-papers/">Call for Papers</a></li>
+      <li><a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/AISciK" target="_blank" rel="noopener">Submit</a></li>
     </ul>
   </nav>
 </header>
@@ -67,102 +63,9 @@
 
   <div class="fleuron" aria-hidden="true">ஐ</div>
 
-  <!-- ======================= SCOPE ======================= -->
-  <section class="section" id="scope">
-    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">ii</span><span class="rubric-word">Scope</span></h2>
-    <div class="section-body">
-      <p class="dropcap">At AISciK, we will ask: as the integration of agentic AI into scientific practice accelerates, how can we preserve the standards and norms that uphold a scientific culture and the knowledge it produces? What does science lose when AI systems participate in scientific discovery, and how does that trade-off against the potential for progress? To what extent does our ability to evaluate, interpret, and trust them depend on discipline, and what does this mean about the nature of knowledge more generally?</p>
-      <p>No single community currently holds the expertise to fully address these considerations. Philosophy of science, science and technology studies, sociology of science, statistics, psychology, anthropology, and the science of science have each built substantive accounts of scientific integrity, trustworthiness, and standards of practice over more than a century. Many of these traditions are already asking what changes when AI systems become collaborators rather than instruments. Technical work from the AI safety community aims to evaluate various capabilities and risks of agentic systems, model their computational processes, and robustly, faithfully interpret model internals. From a scientific perspective, the barrier for entry to using AI is getting lower, and many fields are building bespoke tools (or forming startups) to tackle problems big and small.</p>
-      <p>These groups are rarely in dialogue with one another on these questions, particularly regarding the epistemic risks specific to scientific knowledge production and the various ways to carve it up.</p>
-      <p>We invite submissions from researchers across the empirical, formal, historical, and interpretive disciplines that study science, alongside researchers working on AI safety, interpretability, evaluation, and agentic systems. Submissions are reviewed against the standards of the tradition they are working in; a submission need not contain experiments, models, or code to be competitive.</p>
-      <h3 class="subsection-title">What should be submitted</h3>
-      <p>This workshop explores various aspects of scientific integrity throughout AI integration. Submissions should consider the AI system – its role in and impact on scientific practice – as the object of study. Papers that instead use an AI system as an instrument to produce a scientific result are out of scope. We ask submissions to treat measurement as something to be examined rather than assumed. When a benchmark, a task completion, or a study of scientific practice is offered as evidence, the question of what it actually measures is itself a research question. We are interested in how this question of measurement can be addressed from diverse perspectives including fundamental science, philosophy of science, science and technology studies, AI interpretability and alignment, sociology, and more.</p>
-      <p>Technical contributions are welcome and should be directed at meta-scientific questions — safety, alignment, interpretability, and evaluation as they bear on scientific knowledge production. <strong>Work that uses AI to understand how AI affects scientific research is in scope. Work that uses AI to advance a scientific result is not.</strong></p>
-      <h3 class="subsection-title">Not in scope</h3>
-      <ul class="topic-list">
-        <li>Demonstrations of AI accelerating discovery in a scientific domain.</li>
-        <li>New AI4Science methods or benchmarks whose contribution is capability measurement. Critiques and meta-evaluations of such benchmarks are in scope.</li>
-        <li>Works that focus on AI’s impact in a way that is non-specific to science.</li>
-      </ul>
-    </div>
-  </section>
-
-  <div class="fleuron" aria-hidden="true">ஐ</div>
-
-  <!-- ======================= TRACKS ======================= -->
-  <section class="section" id="tracks">
-    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">iii</span><span class="rubric-word">Tracks</span></h2>
-    <div class="section-body">
-      <p class="dropcap">Tracks describe the form of a contribution, not the discipline it comes from. For example, conceptual, historical, and qualitative work belongs in Research when it reports a completed investigation; the Perspectives track is for arguments, whatever methods the author works with. If a submission could plausibly sit in two tracks, pick the one you find most fitting — we will move it if the reviewers think it belongs elsewhere.</p>
-      <ul class="tracks">
-        <li class="track track-quant"><h3>Quantitative Research</h3></li>
-        <li class="track track-qual"><h3>Qualitative Research</h3></li>
-        <li class="track track-artifact"><h3>Artifact Design</h3></li>
-      </ul>
-    </div>
-  </section>
-
-  <div class="fleuron" aria-hidden="true">ஐ</div>
-
-  <!-- ======================= CALL FOR PAPERS ======================= -->
-  <section class="section" id="cfp">
-    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">iv</span><span class="rubric-word">Call for papers</span></h2>
-    <div class="section-body">
-      <p>To Be Announced</p>
-      <!-- Call for papers copy, held for the real text:
-
-      <p class="dropcap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <div class="questions">
-        <h3 class="questions-heading">Three guiding questions</h3>
-        <ol>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</li>
-          <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat?</li>
-          <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur?</li>
-        </ol>
-      </div>
-      <p>Topics of interest include, but are not limited to:</p>
-      <ul class="topic-list">
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-        <li>Sed do eiusmod tempor incididunt ut labore et dolore</li>
-        <li>Ut enim ad minim veniam, quis nostrud exercitation</li>
-        <li>Duis aute irure dolor in reprehenderit in voluptate</li>
-        <li>Excepteur sint occaecat cupidatat non proident</li>
-        <li>Sunt in culpa qui officia deserunt mollit anim</li>
-      </ul>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore.</p>
-      -->
-    </div>
-  </section>
-
-  <div class="fleuron" aria-hidden="true">ஐ</div>
-
-  <!-- ======================= SUBMISSION ======================= -->
-  <section class="section" id="submission">
-    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">v</span><span class="rubric-word">Submission guidelines</span></h2>
-    <div class="section-body">
-      <p>To Be Announced</p>
-      <p class="submit-row">
-        <a class="button" href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/AISciK" target="_blank" rel="noopener">Submit on OpenReview</a>
-      </p>
-      <!-- Submission guidelines copy, held for the real text. The submit
-           button is live above, so it is not repeated here:
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <ul class="guideline-list">
-        <li><strong>Format.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</li>
-        <li><strong>Length.</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
-        <li><strong>Anonymity.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</li>
-        <li><strong>Review.</strong> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</li>
-      </ul>
-      -->
-    </div>
-  </section>
-
-  <div class="fleuron" aria-hidden="true">ஐ</div>
-
   <!-- ======================= IMPORTANT DATES ======================= -->
   <section class="section" id="dates">
-    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">vi</span><span class="rubric-word">Important dates</span></h2>
+    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">ii</span><span class="rubric-word">Important dates</span></h2>
     <div class="section-body">
       <dl class="dates-list">
         <div class="dates-row"><dt>Submission deadline</dt><dd>August 29, 2026</dd></div>
@@ -176,88 +79,19 @@
 
   <div class="fleuron" aria-hidden="true">ஐ</div>
 
-  <!-- ======================= SCHEDULE ======================= -->
-  <section class="section" id="schedule">
-    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">vii</span><span class="rubric-word">Schedule</span></h2>
-    <div class="section-body">
-      <p>All times are local to Atlanta (Eastern Time). The program below is preliminary.</p>
-<section class="session">
-        <h3 class="session-title">Session 1 &middot; Defining Science</h3>
-        <ol class="schedule">
-          <li class="slot">
-            <span class="slot-time">08:15–08:30</span>
-            <div class="slot-info"><h4>Opening</h4></div>
-          </li>
-          <li class="slot slot-talk">
-            <span class="slot-time">08:30–09:00</span>
-            <div class="slot-info"><h4><a class="slot-link" href="#speaker-1">Invited Talk 1</a></h4></div>
-          </li>
-          <li class="slot slot-talk">
-            <span class="slot-time">09:00–10:15</span>
-            <div class="slot-info"><h4><a class="slot-link" href="#panel-1">Panel Discussion 1: The language of AI safety for science</a></h4></div>
-          </li>
-          <li class="slot slot-break">
-            <span class="slot-time">10:15–10:45</span>
-            <div class="slot-info"><h4>Break</h4></div>
-          </li>
-        </ol>
-      </section>
-      <section class="session">
-        <h3 class="session-title">Session 2 &middot; Protecting Science</h3>
-        <ol class="schedule">
-          <li class="slot slot-talk">
-            <span class="slot-time">10:45–12:00</span>
-            <div class="slot-info"><h4><a class="slot-link" href="#debate">Debate: Is human science dead?</a></h4></div>
-          </li>
-          <li class="slot slot-break">
-            <span class="slot-time">12:00–13:00</span>
-            <div class="slot-info"><h4>Lunch</h4></div>
-          </li>
-          <li class="slot slot-talk">
-            <span class="slot-time">13:00–13:30</span>
-            <div class="slot-info"><h4><a class="slot-link" href="#speaker-2">Invited Talk 2</a></h4></div>
-          </li>
-          <li class="slot slot-talk">
-            <span class="slot-time">13:30–14:45</span>
-            <div class="slot-info"><h4><a class="slot-link" href="#panel-2">Panel Discussion 2: Scientists in the loop + research scaffolding</a></h4></div>
-          </li>
-        </ol>
-      </section>
-      <section class="session">
-        <h3 class="session-title">Session 3 &middot; Community Building</h3>
-        <ol class="schedule">
-          <li class="slot slot-break">
-            <span class="slot-time">14:45–15:00</span>
-            <div class="slot-info"><h4>Break</h4></div>
-          </li>
-          <li class="slot slot-talk">
-            <span class="slot-time">15:00–16:15</span>
-            <div class="slot-info"><h4>Poster Session</h4></div>
-          </li>
-          <li class="slot">
-            <span class="slot-time">16:15–17:00</span>
-            <div class="slot-info"><h4>Artifact Discussion + Closing</h4></div>
-          </li>
-        </ol>
-      </section>
-    </div>
-  </section>
-
-  <div class="fleuron" aria-hidden="true">ஐ</div>
-
   <!-- ======================= SPEAKERS ======================= -->
   <section class="section" id="speakers">
-    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">viii</span><span class="rubric-word">Invited speakers &amp; panelists</span></h2>
+    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">iii</span><span class="rubric-word">Invited speakers &amp; panelists</span></h2>
     <div class="section-body section-body-wide">
 <ul class="people-grid">
         <li class="person" id="speaker-1">
-          <img src="assets/headshots/ranjit-singh.jpg" alt="Headshot of Ranjit Singh" width="400" height="480" loading="lazy">
+          <img src="/assets/headshots/ranjit-singh.jpg" alt="Headshot of Ranjit Singh" width="400" height="480" loading="lazy">
           <h4>Ranjit Singh</h4>
           <p class="person-affil">Data &amp; Society</p>
           <p class="person-role">Invited Talk 1 &middot; TBA</p>
         </li>
         <li class="person" id="speaker-2">
-          <img src="assets/headshots/speaker-2.svg" alt="Placeholder headshot of Federico Bianchi" width="200" height="240">
+          <img src="/assets/headshots/speaker-2.svg" alt="Placeholder headshot of Federico Bianchi" width="200" height="240">
           <h4>Federico Bianchi</h4>
           <p class="person-affil">Together AI</p>
           <p class="person-role">Invited Talk 2 &middot; TBA</p>
@@ -267,17 +101,17 @@
         <h3 class="group-title">Panel Discussion 1: The language of AI safety for science</h3>
         <ul class="people-grid">
         <li class="person">
-          <img src="assets/headshots/yian-yin.jpg" alt="Headshot of Yian Yin" width="400" height="480" loading="lazy">
+          <img src="/assets/headshots/yian-yin.jpg" alt="Headshot of Yian Yin" width="400" height="480" loading="lazy">
           <h4>Yian Yin</h4>
           <p class="person-affil">Cornell</p>
         </li>
         <li class="person">
-          <img src="assets/headshots/mel-andrews.jpg" alt="Headshot of Mel Andrews" width="400" height="480" loading="lazy">
+          <img src="/assets/headshots/mel-andrews.jpg" alt="Headshot of Mel Andrews" width="400" height="480" loading="lazy">
           <h4>Mel Andrews</h4>
           <p class="person-affil">Princeton</p>
         </li>
         <li class="person">
-          <img src="assets/headshots/daniel-herrmann.jpg" alt="Headshot of Daniel Herrmann" width="400" height="480" loading="lazy">
+          <img src="/assets/headshots/daniel-herrmann.jpg" alt="Headshot of Daniel Herrmann" width="400" height="480" loading="lazy">
           <h4>Daniel Herrmann</h4>
           <p class="person-affil">UNC</p>
         </li>
@@ -287,17 +121,17 @@
         <h3 class="group-title">Debate: Is human science dead?</h3>
         <ul class="people-grid">
         <li class="person">
-          <img src="assets/headshots/lisa-messeri.jpg" alt="Headshot of Lisa Messeri" width="400" height="480" loading="lazy">
+          <img src="/assets/headshots/lisa-messeri.jpg" alt="Headshot of Lisa Messeri" width="400" height="480" loading="lazy">
           <h4>Lisa Messeri</h4>
           <p class="person-affil">Yale</p>
         </li>
         <li class="person">
-          <img src="assets/headshots/david-hogg.jpg" alt="Headshot of David Hogg" width="250" height="300" loading="lazy">
+          <img src="/assets/headshots/david-hogg.jpg" alt="Headshot of David Hogg" width="250" height="300" loading="lazy">
           <h4>David Hogg</h4>
           <p class="person-affil">NYU</p>
         </li>
         <li class="person">
-          <img src="assets/headshots/jesse-thaler.jpg" alt="Headshot of Jesse Thaler" width="400" height="480" loading="lazy">
+          <img src="/assets/headshots/jesse-thaler.jpg" alt="Headshot of Jesse Thaler" width="400" height="480" loading="lazy">
           <h4>Jesse Thaler</h4>
           <p class="person-affil">MIT</p>
         </li>
@@ -307,15 +141,15 @@
         <h3 class="group-title">Panel Discussion 2: Scientists in the loop + research scaffolding</h3>
         <ul class="people-grid">
         <li class="person">
-          <img src="assets/headshots/speaker-9.svg" alt="Placeholder headshot" width="200" height="240">
+          <img src="/assets/headshots/speaker-9.svg" alt="Placeholder headshot" width="200" height="240">
           <h4>Panelist TBA</h4>
         </li>
         <li class="person">
-          <img src="assets/headshots/speaker-10.svg" alt="Placeholder headshot" width="200" height="240">
+          <img src="/assets/headshots/speaker-10.svg" alt="Placeholder headshot" width="200" height="240">
           <h4>Panelist TBA</h4>
         </li>
         <li class="person">
-          <img src="assets/headshots/speaker-11.svg" alt="Placeholder headshot" width="200" height="240">
+          <img src="/assets/headshots/speaker-11.svg" alt="Placeholder headshot" width="200" height="240">
           <h4>Panelist TBA</h4>
         </li>
         </ul>
@@ -327,35 +161,35 @@
 
   <!-- ======================= ORGANIZERS ======================= -->
   <section class="section" id="organizers">
-    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">ix</span><span class="rubric-word">Organizers</span></h2>
+    <h2 class="section-rubric"><span class="rubric-no" aria-hidden="true">iv</span><span class="rubric-word">Organizers</span></h2>
     <div class="section-body section-body-wide">
       <ul class="people-grid people-grid-organizers">
         <li class="person">
-          <img src="assets/headshots/savannah-thais.jpg" alt="Headshot of Savannah Thais" width="400" height="480" loading="lazy">
+          <img src="/assets/headshots/savannah-thais.jpg" alt="Headshot of Savannah Thais" width="400" height="480" loading="lazy">
           <h3>Savannah Thais</h3>
           <p class="person-title">Assistant Professor</p>
           <p class="person-affil">City University of New York, USA</p>
         </li>
         <li class="person">
-          <img src="assets/headshots/nathan-suri.jpg" alt="Headshot of Nathan Suri" width="400" height="480" loading="lazy">
+          <img src="/assets/headshots/nathan-suri.jpg" alt="Headshot of Nathan Suri" width="400" height="480" loading="lazy">
           <h3>Nathan Suri</h3>
           <p class="person-title">PhD Candidate</p>
           <p class="person-affil">Yale University, USA</p>
         </li>
         <li class="person">
-          <img src="assets/headshots/lauren-greenspan.jpg" alt="Headshot of Lauren Greenspan" width="400" height="480" loading="lazy">
+          <img src="/assets/headshots/lauren-greenspan.jpg" alt="Headshot of Lauren Greenspan" width="400" height="480" loading="lazy">
           <h3>Lauren Greenspan</h3>
           <p class="person-title">Technical Director</p>
           <p class="person-affil">Principles of Intelligence (PrincInt), USA</p>
         </li>
         <li class="person">
-          <img src="assets/headshots/max-hennick.jpg" alt="Headshot of Max Hennick" width="400" height="480" loading="lazy">
+          <img src="/assets/headshots/max-hennick.jpg" alt="Headshot of Max Hennick" width="400" height="480" loading="lazy">
           <h3>Max Hennick</h3>
           <p class="person-title">Director</p>
           <p class="person-affil">Stormglass AI, Canada</p>
         </li>
         <li class="person">
-          <img src="assets/headshots/roberto-trotta.jpg" alt="Headshot of Roberto Trotta" width="356" height="426" loading="lazy">
+          <img src="/assets/headshots/roberto-trotta.jpg" alt="Headshot of Roberto Trotta" width="356" height="426" loading="lazy">
           <h3>Roberto Trotta</h3>
           <p class="person-title">Professor</p>
           <p class="person-affil">International School for Advanced Studies (SISSA), Italy</p>
@@ -373,6 +207,6 @@
   <p class="footnote">Banner: <a href="https://commons.wikimedia.org/wiki/File:Atlanta_Skyline_-_Piedmont_Park.png">Atlanta skyline from Piedmont Park</a> by <a href="https://www.flickr.com/photos/seanpinto/26354316925/">seanpinto</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC&nbsp;BY&nbsp;2.0</a></p>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js?v=3"></script>
 </body>
 </html>

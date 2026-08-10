@@ -1,15 +1,26 @@
 # AI and Science: Evolution or Extinction? — Workshop Website
 
-Static single-page website for the NeurIPS 2026 workshop. Plain HTML/CSS/JS — no build step, no dependencies.
+Static website for the NeurIPS 2026 workshop. Plain HTML/CSS/JS — no build step, no dependencies.
 
 ## Structure
 
+Four pages, navigated by the top menu (About uses the full title banner; the
+others use a slimmer one):
+
 ```
-index.html          # the whole site (all sections)
-css/styles.css      # all styling (design tokens at the top in :root)
-js/main.js          # mobile nav toggle + scroll-spy (site works without JS)
-assets/headshots/   # placeholder headshot SVGs — replace with real photos
+index.html                   # About: the workshop, dates, speakers, organizers
+scope/index.html             # Scope: what is in and out of scope
+program/index.html           # Program: the day's schedule
+call-for-papers/index.html   # Call for Papers: tracks, call, submission
+css/styles.css               # all styling (design tokens at the top in :root)
+js/main.js                   # mobile nav toggle (site works without JS)
+assets/headshots/            # placeholder headshot SVGs — replace with real photos
 ```
+
+The Program schedule links across to the speaker cards on the About page
+(e.g. `/#speaker-1`). Links to CSS/JS carry a `?v=N` query to defeat GitHub
+Pages' caching — bump `N` on every page when you change `styles.css` or
+`main.js`.
 
 ## Previewing locally
 
@@ -23,7 +34,7 @@ then visit <http://localhost:8000>.
 
 ## Replacing placeholder content
 
-- **Text**: all lorem ipsum lives in `index.html`; each section is marked with a `<!-- ======= SECTION ======= -->` comment.
+- **Text**: the held (commented-out) lorem ipsum lives in `call-for-papers/index.html`; each section on every page is marked with a `<!-- ======= SECTION ======= -->` comment.
 - **Headshots**: drop real photos (ideally square-ish, ≥400px wide) into `assets/headshots/` and update the `src` attributes. The arched-frame placeholder SVGs can be deleted once replaced.
 - **Colors/fonts**: edit the CSS custom properties in the `:root` block at the top of `css/styles.css`.
 

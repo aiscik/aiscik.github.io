@@ -301,6 +301,19 @@ img { max-width: 100%; height: auto; display: block; }
 .section-body p { margin: 0 0 1.1rem; }
 .section-body > :last-child { margin-bottom: 0; }
 
+/* Subsection heading within a section body — the same letterspaced teal
+   label the schedule and questions panel carry, given top room so it
+   reads as a break in the prose above it. */
+.subsection-title {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--rubric);
+  margin: 2rem 0 0.85rem;
+}
+
 /* Drop cap on section openings */
 .dropcap::first-letter {
   font-family: var(--font-display);

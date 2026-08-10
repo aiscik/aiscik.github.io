@@ -409,6 +409,32 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .guideline-list strong { font-weight: 600; }
 
+/* ---------------- Tracks ---------------- */
+
+/* Three track boxes stacked in a column, each keyed to a palette accent
+   carried on its left rule with a faint wash of the same hue behind it. */
+.tracks {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+.track {
+  padding: 1.15rem 1.4rem;
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--track-accent);
+  background: color-mix(in srgb, var(--track-accent) 10%, var(--vellum));
+}
+.track h3 {
+  font-size: 1.2rem;
+  font-weight: 560;
+  color: var(--ink);
+}
+.track-quant    { --track-accent: var(--rubric); }
+.track-qual     { --track-accent: var(--steel-deep); }
+.track-artifact { --track-accent: var(--pop-orange); }
+
 /* ---------------- Submit button ---------------- */
 
 .submit-row { margin-top: 1.75rem; }

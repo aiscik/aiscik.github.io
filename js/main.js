@@ -33,6 +33,7 @@ const sectionMenus = {
   ],
   '/call-for-papers/': [
     ['Call for papers', '#cfp'],
+    ['Important dates', '#dates'],
     ['Tracks', '#tracks'],
     ['Submission guidelines', '#submission'],
     ['Policies', '#policies'],

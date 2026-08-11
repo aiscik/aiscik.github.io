@@ -46,10 +46,6 @@
 
 * { box-sizing: border-box; }
 
-@media (prefers-reduced-motion: no-preference) {
-  html { scroll-behavior: smooth; }
-}
-
 body {
   margin: 0;
   background: var(--vellum);
@@ -129,6 +125,52 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 0.4rem 0.9rem;
 }
 .nav-menu a.nav-cta:hover { background: var(--rubric); color: var(--vellum); }
+
+/* Section-jump dropdowns (built by main.js) under About and Call for Papers */
+.nav-has-menu { position: relative; }
+.nav-has-menu > a::after {
+  content: "\25BE";
+  font-size: 0.7em;
+  margin-left: 0.35em;
+  color: var(--gold);
+  vertical-align: middle;
+}
+.nav-submenu {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  min-width: 13rem;
+  margin: 0;
+  padding: 0.35rem 0;
+  list-style: none;
+  background: var(--vellum);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 24px rgba(8, 44, 66, 0.14);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+  z-index: 30;
+}
+.nav-has-menu:hover .nav-submenu,
+.nav-has-menu:focus-within .nav-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.nav-submenu li { margin: 0; }
+.nav-submenu a {
+  display: block;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  border-bottom: 0;
+}
+.nav-submenu a:hover,
+.nav-submenu a:focus-visible { color: var(--rubric); background: var(--vellum-deep); }
 
 .nav-toggle {
   display: none;
@@ -288,14 +330,6 @@ img { max-width: 100%; height: auto; display: block; }
   text-align: right;
   padding-top: 0.1rem;
 }
-.section-rubric .rubric-no {
-  display: block;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.4rem;
-  line-height: 1;
-  color: var(--steel-deep);
-}
 /* the label treatment the rail carried before it became the heading; the
    h2 it now sits in would otherwise hand it the display serif and its
    heading weight */
@@ -308,7 +342,6 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--rubric);
-  margin-top: 0.35rem;
   text-wrap: balance;
 }
 
@@ -382,31 +415,18 @@ img { max-width: 100%; height: auto; display: block; }
   margin: 0;
   padding: 0;
   list-style: none;
-  counter-reset: q;
   display: grid;
   gap: 1rem;
 }
 
-/* Same numbering, but set in the run of prose rather than in the panel */
+/* the three questions, set in the run of prose rather than in the panel */
 .question-list { margin: 1.5rem 0 1.35rem; }
 
 .questions li,
 .question-list li {
-  counter-increment: q;
-  position: relative;
-  padding-left: 2.4rem;
   font-family: var(--font-display);
   font-size: 1.08rem;
   line-height: 1.5;
-}
-.questions li::before,
-.question-list li::before {
-  content: counter(q, lower-roman) ".";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-style: italic;
-  color: var(--steel-deep);
 }
 
 /* ---------------- Lists: topics & guidelines ---------------- */
@@ -731,7 +751,6 @@ img { max-width: 100%; height: auto; display: block; }
     align-items: baseline;
     gap: 0.6rem;
   }
-  .section-rubric .rubric-no { font-size: 1.15rem; }
   .section-body { border-left: 0; padding-left: 0; }
 }
 
@@ -753,6 +772,21 @@ img { max-width: 100%; height: auto; display: block; }
   .nav-menu a { display: block; padding: 0.55rem 0; border-bottom: 0; }
   .nav-menu a.active,
   .nav-menu a[aria-current="page"] { border-bottom: 0; }
+
+  /* dropdowns open inline and indented within the collapsed menu */
+  .nav-has-menu > a::after { display: none; }
+  .nav-submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    min-width: 0;
+    padding: 0 0 0.35rem 1rem;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+  .nav-submenu a { padding: 0.4rem 0; }
 
   .slot { grid-template-columns: 6rem minmax(0, 1fr); gap: 0.9rem; }
   .slot-speaker { display: flex; margin: 0.4rem 0 0; }

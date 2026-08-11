@@ -18,3 +18,42 @@ if (toggle && menu) {
     }
   });
 }
+
+// Section-jump dropdowns under the About and Call for Papers nav items.
+// Progressive enhancement: without JS the nav links still open each page.
+const sectionMenus = {
+  '/': [
+    ['About the workshop', '#about'],
+    ['Scope', '#scope'],
+    ['Topics of Interest', '#topics'],
+    ['FAQ', '#faq'],
+    ['Important dates', '#dates'],
+    ['Invited speakers & panelists', '#speakers'],
+    ['Organizers', '#organizers'],
+  ],
+  '/call-for-papers/': [
+    ['Call for papers', '#cfp'],
+    ['Tracks', '#tracks'],
+    ['Submission guidelines', '#submission'],
+    ['Policies', '#policies'],
+    ['Review process', '#review-process'],
+  ],
+};
+
+Object.entries(sectionMenus).forEach(([path, sections]) => {
+  const link = document.querySelector('.nav-menu > li > a[href="' + path + '"]');
+  if (!link) return;
+  const li = link.parentElement;
+  li.classList.add('nav-has-menu');
+  const submenu = document.createElement('ul');
+  submenu.className = 'nav-submenu';
+  sections.forEach(([label, hash]) => {
+    const item = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = path + hash;
+    a.textContent = label;
+    item.appendChild(a);
+    submenu.appendChild(item);
+  });
+  li.appendChild(submenu);
+});
